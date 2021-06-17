@@ -16,7 +16,7 @@ class QvdFile():
         During init we determine what mode we are in and for that we use file extension:
         
         - if it is ".qvd" then we are reading
-        - if it is ".xml" then we are creating new QVD file with the stucture defined in XML 
+        - if it is ".xml" then we are creating new QVD file with the structure defined in XML 
 
         XML file has exactly the same structure as metadata section of QVD file, there is a tool
         which extracts metadata section from QVD file and clears necessary data (e.g. number of rows is unknown), 
@@ -24,7 +24,7 @@ class QvdFile():
 
         self.mode = os.O_RDONLY if os.path.split(name)[1].split('.')[1].lower()=='qvd' else os.O_WRONLY
 
-        """ We never ever want to erase exisitng QVD file, so we check QVD file presence and raise
+        """ We never ever want to erase existing QVD file, so we check QVD file presence and raise
         exception if it exists """
         
         if self.mode==os.O_WRONLY and os.access(name.split('.')[0]+'.qvd',os.R_OK): 
@@ -81,7 +81,7 @@ class QvdFile():
         vInd is field value index (zero bases)
         
         raises IndexError in case vInd is larger then field value number
-        raises KeyEror in case fName is not a valid field name
+        raises KeyError in case fName is not a valid field name
         """
 
         # get field object
@@ -134,7 +134,7 @@ class QvdFile():
     def fieldsInRow(self):
         """ generator function which iterates over the fields in the order
         they are placed in the bit index of row table - field with 0 offset
-        is the rightmost one. So generator will first returm leftmost field,
+        is the rightmost one. So generator will first return leftmost field,
         rightmost field (with 0 offset) will be the last one :-)
 
         Generator skips fields with 0 width - there no such fields in bit index
