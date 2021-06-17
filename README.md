@@ -15,12 +15,11 @@ import qvdfile
 
 qvd = qvdfile.QvdFile ("test.qvd")
 
-print("File has {} records".format(qvd.attribs["NoOfRecords"]))
+print(f"File has {qvd.attribs["NoOfRecords"]} records")
 
-print("File has column '{}' with first value of '{}'".format(
-  qvd.fields[0]["FieldName"],qvd.getFieldVal(qvd.fields[0]["FieldName"],0)))
+print(f"File has column {qvd.fields[0]['FieldName']}, {qvd.getFieldVal(qvd.fields[0]['FieldName']})
   
-print("First row of the file is {}".format(qvd.getRow(0)))
+print(f"First row of the file is {qvd.getRow(0)}"
 ```
 
 The structure of QVD file is described in [Wiki](../../wiki).
