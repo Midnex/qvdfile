@@ -1,8 +1,8 @@
 # qvdfile
 
-## QVD File reader and writer (exploratory version)
+## QVD file reader and writer (exploratory version)
 
-This is python3 object created to explore QVD file, it can be used 
+This is Python 3 object created to explore QVD file, it can be used 
 
 * to read QVD file Metadata
 * to read column values from QVD file
@@ -27,11 +27,11 @@ The structure of QVD file is described in [Wiki](../../wiki).
 
 ## Performance
 
-This is explarotary version and it is not suited for production usage. Code simplicity is the first priority. If you need better performance please contact the author: QVD files can be read much much faster by other version of software.
+This is exploratory version and it is not suited for production usage. Code simplicity is the first priority. If you need better performance please contact the author: QVD files can be read much much faster by other version of software.
 
 ### Reading fields
 
-QVD file does not allow indexing - it is impossible to read field #N without reading (N-1) previous fields. This version contains no caching - if you read field #4 and then read field #5 you will read 4 fields first and then read 4 same fields again... This is done specificly for simplicity.
+QVD file does not allow indexing - it is impossible to read field #N without reading (N-1) previous fields. This version contains no caching - if you read field #4 and then read field #5 you will read 4 fields first and then read 4 same fields again... This is done specifically for simplicity.
 
 It is faster to read first fields then the last fields. It is nearly impossible to read field #10 000 000 (while it is OK to read field #1000).
 
@@ -45,7 +45,7 @@ For performance contact the author.
 
 Code is simple and depends only on bitstring module:
 
-```pip install bitstring```
+```python -m pip install bitstring```
 
 ## Unit tests
 
