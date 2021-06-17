@@ -140,6 +140,7 @@ class QvdFile:
                     val = a.unpack("floatle:64")[0]
 
             else:
+                val = b""
                 print("UNHANDLED YET TYPE: ", b)  # never happened to me...
 
         return val
