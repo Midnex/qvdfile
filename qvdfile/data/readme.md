@@ -22,7 +22,7 @@ store tab1 into "tab1.qvd" (qvd);
 
 ## tab2.qvd
 
-More lengthy file needed to demostrate multi-byte bit indices:
+More lengthy file needed to demonstrate multi-byte bit indices:
 
 ```
 tab2:
